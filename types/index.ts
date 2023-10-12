@@ -3,3 +3,20 @@ export interface AddTaskProps {
   setTask: (task: string) => void;
   handleCreateTask: () => void;
 }
+export interface ITasks {
+  _id: string;
+  task: string;
+  completed: boolean;
+}
+
+export interface TaskProps {
+  individualTask: ITasks;
+  handleCompleteTask: (id: string) => void;
+  handleDeleteTask: (id: string) => void;
+}
+
+export interface IDeleteTaskRequestParam {
+  params: {
+    id: string;
+  };
+}

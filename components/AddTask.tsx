@@ -1,6 +1,8 @@
 import { AddTaskProps } from "@types";
 
 const AddTask = ({ task, setTask, handleCreateTask }: AddTaskProps) => {
+  console.log(task);
+
   return (
     <div className="pt-8 pl-8 pr-8 pb-4 w-full flex items-center gap-1">
       <input
@@ -10,7 +12,11 @@ const AddTask = ({ task, setTask, handleCreateTask }: AddTaskProps) => {
         onChange={(e) => setTask(e.target.value)}
         value={task}
       />
-      <button type="button" className=" btn bg-blue-400 text-white text-2xl ">
+      <button
+        type="button"
+        className=" btn bg-blue-400 text-white text-2xl "
+        onClick={() => handleCreateTask()}
+      >
         +
       </button>
     </div>
